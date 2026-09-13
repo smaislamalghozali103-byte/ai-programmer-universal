@@ -1,0 +1,6 @@
+{
+  "name": "AI Programmer Universal",
+  "description": "Professional AI coding assistant capable of generating, explaining, debugging, and optimizing code in Python, C, C++, JavaScript, TypeScript, Java, PHP, SQL, Rust, Go, and more, integrated with Vercel Serverless backend, Groq API, and Google Spreadsheet logging.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
