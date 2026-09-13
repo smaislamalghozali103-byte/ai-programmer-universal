@@ -154,7 +154,8 @@ app.post('/api/chat', async (req, res) => {
         const sheetRes = await fetch(sheetUrl, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(sheetPayload)
+          body: JSON.stringify(sheetPayload),
+          redirect: 'follow'
         });
 
         if (sheetRes.ok) {
@@ -204,7 +205,8 @@ app.post('/api/test-sheet', async (req, res) => {
     const sheetRes = await fetch(targetUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(testPayload)
+      body: JSON.stringify(testPayload),
+      redirect: 'follow'
     });
 
     if (!sheetRes.ok) {

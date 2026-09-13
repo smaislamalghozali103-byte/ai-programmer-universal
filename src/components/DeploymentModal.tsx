@@ -69,19 +69,16 @@ function doPost(e) {
     sheet.getRange(lastRow, 3, 1, 2).setWrap(true);
 
     return ContentService.createTextOutput(JSON.stringify({ status: 'success', row: lastRow }))
-      .setMimeType(ContentService.MimeType.JSON)
-      .setHeader('Access-Control-Allow-Origin', '*');
+      .setMimeType(ContentService.MimeType.JSON);
   } catch (error) {
     return ContentService.createTextOutput(JSON.stringify({ status: 'error', message: error.toString() }))
-      .setMimeType(ContentService.MimeType.JSON)
-      .setHeader('Access-Control-Allow-Origin', '*');
+      .setMimeType(ContentService.MimeType.JSON);
   }
 }
 
 function doGet(e) {
   return ContentService.createTextOutput(JSON.stringify({ status: 'online', service: 'AI Programmer Universal Logger' }))
-    .setMimeType(ContentService.MimeType.JSON)
-    .setHeader('Access-Control-Allow-Origin', '*');
+    .setMimeType(ContentService.MimeType.JSON);
 }`;
 
   const vercelApiCode = `// /api/chat.js - Vercel Serverless Function

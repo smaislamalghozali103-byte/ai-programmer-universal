@@ -108,9 +108,7 @@ function doPost(e) {
         timestamp: timestamp,
         sessionId: sessionId
       })
-    )
-      .setMimeType(ContentService.MimeType.JSON)
-      .setHeader('Access-Control-Allow-Origin', '*');
+    ).setMimeType(ContentService.MimeType.JSON);
   } catch (error) {
     Logger.log('Error logging to spreadsheet: ' + error.toString());
     return ContentService.createTextOutput(
@@ -118,9 +116,7 @@ function doPost(e) {
         status: 'error',
         message: error.toString()
       })
-    )
-      .setMimeType(ContentService.MimeType.JSON)
-      .setHeader('Access-Control-Allow-Origin', '*');
+    ).setMimeType(ContentService.MimeType.JSON);
   }
 }
 
@@ -140,7 +136,5 @@ function doGet(e) {
       totalConversationsLogged: totalRows,
       instructions: 'Send HTTP POST with JSON body containing: { timestamp, sessionId, userMessage, aiResponse, model }'
     })
-  )
-    .setMimeType(ContentService.MimeType.JSON)
-    .setHeader('Access-Control-Allow-Origin', '*');
+  ).setMimeType(ContentService.MimeType.JSON);
 }
